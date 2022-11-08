@@ -3,14 +3,13 @@ describe('Alura Pic Register', () => {
     beforeEach(() => {
 
         cy.visit('https://alura-fotos.herokuapp.com/#/home');
-        cy.contains('a','Register now').click();
-        cy.contains('button','Register').click();
 
     })
 
     it('Verifica mensagens de validação', () =>{
 
-      
+      cy.contains('a','Register now').click();
+      cy.contains('button','Register').click();
       cy.contains('ap-vmessage','Email is required!')
       .should('be.visible');
       cy.contains('button','Register').click();
@@ -24,6 +23,8 @@ describe('Alura Pic Register', () => {
 
     it('Verifica mensagens de email inválido', () =>{
 
+      cy.contains('a','Register now').click();
+      cy.contains('button','Register').click();
       cy.contains('ap-vmessage','Email is required!').should('be.visible');
       cy.get('input[formcontrolname="email"]').type('renato');
       cy.contains('ap-vmessage','Invalid e-mail').should('be.visible');
@@ -31,6 +32,8 @@ describe('Alura Pic Register', () => {
 
     it('Verifica mensagens de senha menor que 8 dígitos', () =>{
 
+      cy.contains('a','Register now').click();
+      cy.contains('button','Register').click();
       cy.contains('button','Register').click();
       cy.contains('ap-vmessage','Password is required!').should('be.visible');
       cy.get('input[formcontrolname="password"]').type('1234567');
@@ -40,6 +43,8 @@ describe('Alura Pic Register', () => {
 
     it('Verifica mensagens de Fullname menor que 2 dígitos', () =>{
 
+      cy.contains('a','Register now').click();
+      cy.contains('button','Register').click();
       cy.contains('button','Register').click();
       cy.contains('ap-vmessage','Full name is required!').should('be.visible');
       cy.get('input[formcontrolname="fullName"]').type('a');
