@@ -4,3 +4,7 @@ Cypress.Commands.add('login',(nome,password) =>{
     cy.get('button[type="submit"]').click();
 
 })
+
+Cypress.Commands.add('registra',(email,fullName,userName,password) => {
+    
+})
