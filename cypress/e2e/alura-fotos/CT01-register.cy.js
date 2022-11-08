@@ -53,7 +53,13 @@ describe('Alura Pic Register', () => {
     })
 
     it('Register Valid User',() =>{
-      cy.register('correctemail@email.com','testFullName','testUsername','testPassword');
+      cy.register('correctemail@email.com','testFullName','testusername','testPassword');
+      cy.contains('.text-success','User available').should('be.visible');
+    })
+
+    it('Register Taken User',() =>{
+      cy.register('correctemail@email.com','testFullName','flavio','testPassword');
+      cy.contains('.text-danger','Username already taken').should('be.visible');
     })
 
 
