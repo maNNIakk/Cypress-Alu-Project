@@ -52,6 +52,10 @@ describe('Alura Pic Register', () => {
       cy.contains('ap-vmessage','Mininum length is 2').should('be.visible');
     })
 
+    it('Register Valid User',() =>{
+      cy.register('correctemail@email.com','testFullName','testUsername','testPassword');
+    })
+
 
 
   })
