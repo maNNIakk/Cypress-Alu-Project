@@ -1,4 +1,5 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require("cypress")
+require('dotenv').config()
 
 module.exports = 
 defineConfig({
@@ -6,8 +7,8 @@ defineConfig({
   reporterOptions: {
     reportDir: "cypress/report/mochawesome-report",
     overwrite: true,
-    html: true,
-    json: false,
+    html: false,
+    json: true,
     timestamp: "mmddyyyy_HHMMss"
   },
   video: false,

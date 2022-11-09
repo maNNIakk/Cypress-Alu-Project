@@ -4,7 +4,8 @@
   "description": "Primeiro Projeto com Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress open",
+    "mochawesome-merge": "npx cypress/report/mochawesome-report/*.json > cypress/report/output.json"
   },
   "author": "Renato",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
