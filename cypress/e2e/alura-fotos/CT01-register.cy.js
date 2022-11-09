@@ -76,9 +76,4 @@ describe('Alura Pic Register', () => {
     })
 
   })
-
-
-
-
-
 })
