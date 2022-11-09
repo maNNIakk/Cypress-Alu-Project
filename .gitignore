@@ -3,3 +3,7 @@ node_modules
 
 #Sensitive Data - shouldn't be on HUB
 cypress.env.json
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
