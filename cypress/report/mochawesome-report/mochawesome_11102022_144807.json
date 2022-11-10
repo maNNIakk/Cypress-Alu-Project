@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-11-09T23:24:45.627Z",
-    "end": "2022-11-09T23:24:50.122Z",
-    "duration": 4495,
+    "start": "2022-11-10T17:48:06.944Z",
+    "end": "2022-11-10T17:48:07.884Z",
+    "duration": 940,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3e58db38-a9a4-4c1a-9511-0ea2139cf5dc",
+      "uuid": "ce2d5f14-f912-4b06-b115-f84ff68c8494",
       "title": "",
       "fullFile": "cypress\\e2e\\api-alurapic\\api-alurapic.cy.js",
       "file": "cypress\\e2e\\api-alurapic\\api-alurapic.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c9e7327b-97c9-494a-8f92-f9caa86b4141",
+          "uuid": "46924982-49d9-4a1c-a653-08293e053886",
           "title": "Search photos and data",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Search Flavio photos",
-              "fullTitle": "Search photos and data Search Flavio photos",
+              "title": "Flavio Login",
+              "fullTitle": "Search photos and data Flavio Login",
               "timedOut": null,
-              "duration": 4310,
+              "duration": 901,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://apialurapic.herokuapp.com/flavio/photos\"\n}).then(res => {\n  expect(res.status).to.be.equal(200);\n  expect(res.body).is.not.empty;\n  expect(res.body[0]).to.have.property('description');\n  expect(res.body[0].description).to.be.equal('Farol iluminado');\n});",
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://apialurapic.herokuapp.com/user/login',\n  body: Cypress.env()\n}).then(res => {\n  expect(res.status).to.be.equal(200);\n  expect(res.body).is.not.empty;\n  expect(res.body).to.have.property('id');\n  expect(res.body.id).to.be.equal(1);\n  expect(res.body).to.have.property('name');\n  expect(res.body.name).to.be.equal('flavio');\n  expect(res.body).to.have.property('email');\n  expect(res.body.email).to.be.equal('flavio@alurapic.com.br');\n});",
               "err": {},
-              "uuid": "d87692a5-ec1b-4a79-abc4-81b3804e571d",
-              "parentUUID": "c9e7327b-97c9-494a-8f92-f9caa86b4141",
+              "uuid": "a8e41cf4-ceec-47b4-8115-d6ee054e8d4f",
+              "parentUUID": "46924982-49d9-4a1c-a653-08293e053886",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d87692a5-ec1b-4a79-abc4-81b3804e571d"
+            "a8e41cf4-ceec-47b4-8115-d6ee054e8d4f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4310,
+          "duration": 901,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
