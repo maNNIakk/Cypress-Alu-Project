@@ -12,7 +12,7 @@ defineConfig({
     timestamp: "mmddyyyy_HHMMss"
   },
   video: false,
-  recordKey: process.env.CYPRESS_RECORD_KEY,
+  recordKey: process.env.CYPRESS_RECORD_KEY ,
   projectId: "fzfg3u",
   e2e: {
 

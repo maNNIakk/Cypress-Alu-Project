@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-09T23:24:05.087Z",
+    "end": "2022-11-09T23:24:14.124Z",
+    "duration": 9037,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e1a2be6f-9d42-489a-afdd-13ff1c219eba",
+      "title": "",
+      "fullFile": "cypress\\e2e\\alura-fotos\\CT01-login.cy.js",
+      "file": "cypress\\e2e\\alura-fotos\\CT01-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a128a0e9-096f-484f-bce8-a9ab804d2006",
+          "title": "Alura Pic Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fazer login de usuário válido",
+              "fullTitle": "Alura Pic Login Fazer login de usuário válido",
+              "timedOut": null,
+              "duration": 4543,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('flavio', '123');\ncy.contains('a', '(Logout').should('be.visible');",
+              "err": {},
+              "uuid": "3625ff2d-3f6a-44d5-a507-3642ec70ef92",
+              "parentUUID": "a128a0e9-096f-484f-bce8-a9ab804d2006",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fazer login de usuário inválido",
+              "fullTitle": "Alura Pic Login Fazer login de usuário inválido",
+              "timedOut": null,
+              "duration": 1553,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('jacqueline', '1234');\ncy.on('window:alert', str => {\n  expect(str).to.equal('Invalid user name or password');\n});",
+              "err": {},
+              "uuid": "e6e273ee-bded-464d-9f9e-71b2aa10dc11",
+              "parentUUID": "a128a0e9-096f-484f-bce8-a9ab804d2006",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3625ff2d-3f6a-44d5-a507-3642ec70ef92",
+            "e6e273ee-bded-464d-9f9e-71b2aa10dc11"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6096,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
