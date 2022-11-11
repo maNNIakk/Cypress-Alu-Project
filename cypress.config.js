@@ -15,7 +15,7 @@ defineConfig({
   recordKey: process.env.CYPRESS_RECORD_KEY ,
   projectId: "fzfg3u",
   e2e: {
-
+    baseUrl: "https://alura-fotos.herokuapp.com/#/home",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },

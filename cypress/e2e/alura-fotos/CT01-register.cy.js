@@ -2,7 +2,7 @@ describe('Alura Pic Register', () => {
 
   beforeEach(() => {
 
-    cy.visit('https://alura-fotos.herokuapp.com/#/home');
+    cy.visit('/');
 
   })
 
