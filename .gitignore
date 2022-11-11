@@ -1,9 +1,0 @@
-#This file doesn't need to be on HUB
-node_modules
-
-#Sensitive Data - shouldn't be on HUB
-
-.env*
-.flaskenv*
-!.env.project
-!.env.vault
