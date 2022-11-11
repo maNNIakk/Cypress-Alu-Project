@@ -1,6 +1,6 @@
 {
   "name": "cypress",
-  "version": "1.0.0",
+  "version": "10.11.0",
   "description": "Primeiro Projeto com Cypress",
   "main": "index.js",
   "scripts": {

@@ -12,7 +12,6 @@ defineConfig({
     timestamp: "mmddyyyy_HHMMss"
   },
   video: false,
-  recordKey: process.env.CYPRESS_RECORD_KEY ,
   projectId: "fzfg3u",
   e2e: {
     baseUrl: "https://alura-fotos.herokuapp.com/#/home",
