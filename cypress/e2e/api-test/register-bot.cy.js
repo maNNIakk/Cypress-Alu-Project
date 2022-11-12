@@ -13,5 +13,4 @@ describe('Cria Lead', () => {
         cy.fillForm(Cypress.env('renato'),'xablau','21992535332','xablau@xablau.com',Cypress.env('ev1'));
 
     })
-
 })
