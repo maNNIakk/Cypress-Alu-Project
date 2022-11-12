@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx cypress open",
     "mochawesome-merge": "npx  mochawesome-merge ./cypress/report/mochawesome-report/*.json > cypress/report/output.json",
-    "merge-html": "marge cypress/report/output.json --reportDir ./cypress/report --inline"
+    "merge-html": "marge cypress/report/output.json --reportDir ./ --inline"
   },
   "author": "Renato",
   "license": "ISC",
