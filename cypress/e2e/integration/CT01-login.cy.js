@@ -1,18 +1,18 @@
 describe('Alura Pic Login', () =>{
 
   beforeEach(() => {
-    cy.visit('https://alura-fotos.herokuapp.com/#/home');
+    cy.visit('/');
 
   })
 
   it('Fazer login de usuário válido', () => {
-    cy.login('flavio','123');
+    cy.login(Cypress.env('userName'),Cypress.env('password'));
     cy.contains('a','(Logout').should('be.visible');
 
   })
 
   it('Fazer login de usuário inválido', () =>{
-    cy.login('jacqueline','1234');
+    cy.login(Cypress.env('wrongUserName'),Cypress.env('wrongPassword'));
     cy.on('window:alert', (str) =>{
       expect(str).to.equal('Invalid user name or password');
     })

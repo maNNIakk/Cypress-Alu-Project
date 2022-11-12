@@ -1,3 +1,4 @@
+const { expect } = require("chai")
 
 describe('Search photos and data', () => {
     it('Search Flavio photos', () => {
@@ -13,10 +14,10 @@ describe('Search photos and data', () => {
         )
     })
 
-    it.only('Flavio Login', () => {
+    it('Valid Login', () => {
         cy.request({
             method: 'POST',
-            url: 'https://apialurapic.herokuapp.com/user/login',
+            url: Cypress.env('login-api-url'),
             body: Cypress.env()
         }).then((res) => {
             expect(res.status).to.be.equal(200)
@@ -27,6 +28,27 @@ describe('Search photos and data', () => {
             expect(res.body.name).to.be.equal('flavio')
             expect(res.body).to.have.property('email')
             expect(res.body.email).to.be.equal('flavio@alurapic.com.br')
+        })
+    })
+
+    it.only('Invalid Login', () => {
+        cy.request({
+            method: 'POST',
+            url: Cypress.env('login-api-url'),
+            failOnStatusCode: false,
+            body: {username: Cypress.env('wrongUserName'),
+            password: Cypress.env('wrongPassword')}
+        }).then((res) => {
+            expect(res.status).to.be.equal(401)
+            expect(res.body).is.not.empty
+            //expect(res.body).to.have.property('id')
+            //expect(res.body.id).to.be.equal(1)
+            //expect(res.body).to.have.property('name')
+            //expect(res.body.name).to.be.equal('flavio')
+            //expect(res.body).to.have.property('email')
+            //expect(res.body.email).to.be.equal('flavio@alurapic.com.br')
+            expect(res.body).to.have.property('message')
+            expect(res.body.message).to.be.equal('Authentication failed for user undefined')
         })
     })
 })
