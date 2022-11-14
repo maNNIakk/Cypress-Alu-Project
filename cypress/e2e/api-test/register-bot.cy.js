@@ -10,6 +10,7 @@ describe('Cria Lead', () => {
 
     it.only('Cria Novo Formulário Loja', () =>{
 
+        cy.validateForm();
         cy.fillForm(Cypress.env('renato'),'xablau','21992535332','xablau@xablau.com',Cypress.env('ev1'));
 
     })
