@@ -1,4 +1,3 @@
-const { exists } = require("chai")
 
 describe('Cria Lead', () => {
 
